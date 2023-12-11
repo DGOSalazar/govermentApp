@@ -1,6 +1,8 @@
 package com.example.govermentapp.di
 
+import com.example.govermentapp.data.GovernmentRepositoryImplementation
 import com.example.govermentapp.data.datasource.network.GobApiClient
+import com.example.govermentapp.domain.GovernmentRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -43,5 +45,11 @@ object NetworkModule {
     @Provides
     fun providePokeApiClient(retrofit: Retrofit) : GobApiClient{
         return retrofit.create(GobApiClient::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGovernmentRepository(apiService:GobApiClient): GovernmentRepository {
+        return GovernmentRepositoryImplementation(apiService)
     }
 }
