@@ -12,8 +12,7 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/government_nav"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent" />
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_loader_general"
         app:layout_constraintStart_toStartOf="parent"

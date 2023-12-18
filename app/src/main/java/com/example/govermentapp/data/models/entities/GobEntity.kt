@@ -3,8 +3,9 @@ package com.example.govermentapp.data.models.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.govermentapp.domain.GovernmentInstitution
 
-@Entity(tableName = "gob_table")
+@Entity(tableName = "government_institution_table")
 data class GobEntity (@PrimaryKey(autoGenerate = true)
                       @ColumnInfo(name="identity") var identity : Int = 0,
                       @ColumnInfo(name="_id") var id : String="",
@@ -18,3 +19,5 @@ data class GobEntity (@PrimaryKey(autoGenerate = true)
                       @ColumnInfo(name="operations") var operations : String="",
                       @ColumnInfo(name="dataset") var dataset : String="",
                       @ColumnInfo(name="created_at") var created_at : String="")
+
+fun GovernmentInstitution.toDataBase() = GobEntity(organization = organization, fact = fact, url = url)

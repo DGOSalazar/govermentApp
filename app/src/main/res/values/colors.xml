@@ -11,4 +11,8 @@
     <color name="blue_app">#0689D5</color>
     <color name="textColor">#950E0E</color>
     <color name="shadow_back">#280C0C0C</color>
+
+    <color name="background">#134B77</color>
+    <color name="background_image">#03A9F4</color>
+
 </resources>
