@@ -2,4 +2,5 @@
     <string name="app_name">GovermentApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="message_organization">Nombre de la organizacón: %s\nSitio de la publicación:\n%s\nUbicación desde donde se compartio la organización:\nLatitud:%s\nLongitud:%s</string>
 </resources>

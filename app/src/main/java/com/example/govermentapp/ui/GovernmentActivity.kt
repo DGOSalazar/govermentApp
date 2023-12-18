@@ -5,7 +5,9 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import com.example.govermentapp.R
 import com.example.govermentapp.databinding.ActivityGovernmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GovernmentActivity : AppCompatActivity() {
     private lateinit var mBinding : ActivityGovernmentBinding
     private val navController by lazy { findNavController(R.id.government_nav_controller) }
