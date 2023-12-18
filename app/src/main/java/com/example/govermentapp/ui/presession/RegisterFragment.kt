@@ -82,6 +82,7 @@ class RegisterFragment : Fragment() {
                         getString(R.string.welcome_message), Toast.LENGTH_SHORT
                     ).show()
                     (activity as GovernmentActivity).hideLoader()
+                    findNavController().navigate(RegisterFragmentDirections.actionRegisterFragmentToHomeFragment())
                 }
                 Status.ERROR -> {
                     (activity as GovernmentActivity).hideLoader()

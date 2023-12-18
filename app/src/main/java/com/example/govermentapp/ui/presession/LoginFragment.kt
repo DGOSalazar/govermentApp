@@ -78,6 +78,7 @@ class LoginFragment : Fragment() {
                         getString(R.string.welcome_message),
                         Toast.LENGTH_SHORT
                     ).show()
+                    findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
                 }
 
                 Status.ERROR -> {

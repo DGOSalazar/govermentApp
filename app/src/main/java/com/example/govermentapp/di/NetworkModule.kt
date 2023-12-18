@@ -3,7 +3,6 @@ package com.example.govermentapp.di
 import android.location.LocationManager
 import com.example.govermentapp.data.GovernmentRepositoryImplementation
 import com.example.govermentapp.data.datasource.database.dao.GovernmentInstitutionsDao
-import com.example.govermentapp.data.repositories.GovernmentRepositoryImplementation
 import com.example.govermentapp.data.datasource.network.GobApiClient
 import com.example.govermentapp.domain.GovernmentRepository
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -51,7 +50,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun providePokeApiClient(retrofit: Retrofit) : GobApiClient{
+    fun provideApiClient(retrofit: Retrofit) : GobApiClient{
         return retrofit.create(GobApiClient::class.java)
     }
 
