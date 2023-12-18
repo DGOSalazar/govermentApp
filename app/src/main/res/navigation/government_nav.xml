@@ -7,11 +7,15 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.govermentapp.ui.login.LoginFragment"
+        android:name="com.example.govermentapp.ui.presession.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
+            app:enterAnim="@anim/out_for_rigth"
+            app:exitAnim="@anim/int_for_left"
+            app:popEnterAnim="@anim/out_for_rigth"
+            app:popExitAnim="@anim/int_for_left"
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
@@ -19,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.govermentapp.ui.register.RegisterFragment"
+        android:name="com.example.govermentapp.ui.presession.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
     <fragment

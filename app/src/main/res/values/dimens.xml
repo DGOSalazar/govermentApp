@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_btn">300dp</dimen>
+    <dimen name="height_btn">65dp</dimen>
+    <dimen name="min_margin">8dp</dimen>
+    <dimen name="regular_margin">16dp</dimen>
+    <dimen name="input_text">12sp</dimen>
+    <dimen name="regular_text">16sp</dimen>
+    <dimen name="title_text">50sp</dimen>
+    <dimen name="welcome_text">30sp</dimen>
+    <dimen name="max_top_margin">150dp</dimen>
+    <dimen name="input_width">360dp</dimen>
+    <dimen name="margin_input">20dp</dimen>
+    <dimen name="not_margin">0dp</dimen>
+    <dimen name="margin_email_pass">62dp</dimen>
+    <dimen name="img_size">30dp</dimen>
+    <dimen name="img_size_error">100dp</dimen>
+</resources>

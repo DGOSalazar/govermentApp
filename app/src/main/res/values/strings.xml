@@ -2,4 +2,28 @@
     <string name="app_name">GovermentApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_register">Registro</string>
+    <string name="title_login">Login</string>
+    <string name="label_forgot_pass"><u><font color="#38b6ff">¿Olvidaste tu contraseña?</font></u></string>
+    <string name="type_your_pass">Ingresa tu contraseña</string>
+    <string name="type_your_mail">Ingresa tu correo</string>
+    <string name="type_confirm_pass">Confirma tu contraseña</string>
+    <string name="error_general_title">Algo ah salido mal!</string>
+    <string name="error_general_id">0081</string>
+    <string name="btn_understand">Entendido</string>
+    <string name="welcome_message">Registro exitoso, Bienvenido!</string>
+    <string name="error_label_mail">Introduce un correo correcto</string>
+    <string name="error_label_pass">Introduce una contraseña de almenos 8 caracteres</string>
+    <string name="biometric_title">Autenticación biométrica</string>
+    <string name="biometric_help_label">Usa tu huella para autenticarte</string>
+    <string name="cancel_label">Cancelar</string>
+    <string name="error_12_msg">La autenticación fallo, intentalo de nuevo.</string>
+    <string name="error_12_code">00012</string>
+    <string name="biometric_success">Huella reconocida!</string>
+    <string name="email_key">emailUser</string>
+    <string name="pass_key">passUser</string>
+    <string name="biometric_key">isBiometric</string>
+    <string name="welcome_message_biometric">Buenos días <font color="#FF031468">%1$s</font>!, Bienvenido de nuevo.</string>
+    <string name="login_biometric">Iniciar sesión con huella digital</string>
+    <string name="conofiguration_error">Debes otorgar permisos en la configuración.</string>
 </resources>

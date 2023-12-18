@@ -6,6 +6,7 @@ plugins {
     id 'com.google.dagger.hilt.android'
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -40,7 +41,6 @@ android {
     }
 }
 
-def lifecycle_version = "2.5.1"
 def nav_version = "2.5.3"
 def fragment_version = "1.5.5"
 def room_version = "2.4.3"
@@ -51,9 +51,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //navigation
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
@@ -90,10 +87,19 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:4.11.0"
 
     //Firebase
-    implementation platform('com.google.firebase:firebase-bom:28.2.1')
-    implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation 'com.google.firebase:firebase-auth-ktx'
-    implementation 'com.google.firebase:firebase-firestore-ktx'
-    implementation 'com.google.firebase:firebase-storage-ktx'
-    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.0.0'
+
+    //lottie
+    implementation 'com.airbnb.android:lottie:5.2.0'
+
+    //biometric
+    implementation 'androidx.biometric:biometric:1.1.0'
+
+    //test
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'io.mockk:mockk:1.12.2'
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
