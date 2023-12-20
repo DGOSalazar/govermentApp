@@ -4,14 +4,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.login.LoginFragment">
+    tools:context=".ui.presession.LoginFragment">
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:textSize="100dp"
-        android:text="SI JALO LA NAV" />
+        android:layout_marginTop="@dimen/max_top_margin"
+        android:textSize="@dimen/title_text"
+        android:textColor="@color/black"
+        android:text="@string/title_login" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_input"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/cl_buttons"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_message_biometric"
+            android:gravity="center"
+            android:textSize="@dimen/welcome_text"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_input"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/cl_buttons"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/il_mail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:backgroundTint="@color/transparent"
+                android:id="@+id/input_mail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_btn"
+                android:inputType="textEmailAddress"
+                android:hint="@string/type_your_mail"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:textSize="@dimen/input_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/il_pass"
+            android:layout_width="@dimen/not_margin"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/il_mail"
+            app:layout_constraintEnd_toEndOf="@id/il_mail"
+            android:layout_marginTop="@dimen/regular_margin"
+            app:layout_constraintTop_toBottomOf="@id/il_mail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:backgroundTint="@color/transparent"
+                android:id="@+id/input_pass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_btn"
+                android:inputType="textEmailAddress"
+                android:hint="@string/type_your_pass"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:textSize="@dimen/input_text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_forgot_pass"
+            android:text="@string/label_forgot_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_margin"
+            app:layout_constraintTop_toBottomOf="@id/il_pass"
+            app:layout_constraintEnd_toEndOf="@id/il_pass"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_input"
+        android:layout_marginHorizontal="@dimen/margin_input"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/black"
+            android:text="@string/title_login"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_btn"
+            android:layout_marginTop="@dimen/min_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_login"
+            android:backgroundTint="@color/black"
+            android:text="@string/title_register"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

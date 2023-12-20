@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerOrganization"
+    android:background="@color/white"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ly_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:background="@color/background_image">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint="@color/black"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_organization"/>
+
+            <TextView
+                android:id="@+id/tvGovernmentInstitution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="IMSS"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="1234567890"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFactOrganization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Texto de Prueba"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWebSiteOrganization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Aandndh ajdidooaidu ds ess df dds aaaasee dfd."
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:gravity="end|center">
+
+            <ImageView
+                android:id="@+id/ivShare"
+                android:contentDescription="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_aux_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="@dimen/min_margin"
+        app:layout_constraintTop_toBottomOf="@id/ly_main">
+        <TextView
+            android:id="@+id/tvOperations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concat_operations"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvdDataset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concat_dataset"
+            app:layout_constraintTop_toBottomOf="@id/tvOperations"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCreatedAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concat_created"
+            app:layout_constraintTop_toBottomOf="@+id/tvdDataset"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

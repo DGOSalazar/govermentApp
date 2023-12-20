@@ -1,14 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.register.RegisterFragment">
+    tools:context=".ui.presession.RegisterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/regular_margin"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:src="@drawable/icon_back"
+            android:contentDescription="@string/title_login"
+            />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/max_top_margin"
+            android:textSize="@dimen/title_text"
+            android:textColor="@color/black"
+            android:text="@string/title_register" />
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_input"
+            app:layout_constraintBottom_toTopOf="@id/cl_buttons"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/il_mail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:backgroundTint="@color/transparent"
+                    android:id="@+id/input_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_btn"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/type_your_mail"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:textSize="@dimen/input_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/il_pass"
+                android:layout_width="@dimen/not_margin"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_email_pass"
+                app:layout_constraintStart_toStartOf="@id/il_mail"
+                app:layout_constraintEnd_toEndOf="@id/il_mail"
+                app:layout_constraintTop_toBottomOf="@id/il_mail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:backgroundTint="@color/transparent"
+                    android:id="@+id/input_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_btn"
+                    android:inputType="numberPassword"
+                    android:hint="@string/type_your_pass"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:textSize="@dimen/input_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/il_pass_confirm"
+                android:layout_width="@dimen/not_margin"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/regular_margin"
+                app:layout_constraintStart_toStartOf="@id/il_mail"
+                app:layout_constraintEnd_toEndOf="@id/il_mail"
+                app:layout_constraintTop_toBottomOf="@id/il_pass">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:backgroundTint="@color/transparent"
+                    android:id="@+id/input_pass_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_btn"
+                    android:inputType="numberPassword"
+                    android:hint="@string/type_confirm_pass"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:textSize="@dimen/input_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_finger_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Deseas ingresar con tu huella en el futuro?"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/il_pass_confirm"
+                app:layout_constraintEnd_toStartOf="@id/switch_fingerprint"
+                app:layout_constraintTop_toTopOf="@id/switch_fingerprint"
+                app:layout_constraintBottom_toBottomOf="@id/switch_fingerprint"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_fingerprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_marginTop="@dimen/margin_input"
+                app:layout_constraintTop_toBottomOf="@id/il_pass_confirm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:switchMinWidth="55dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_input"
+            android:layout_marginHorizontal="@dimen/margin_input"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:backgroundTint="@color/black"
+                android:text="@string/title_register"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

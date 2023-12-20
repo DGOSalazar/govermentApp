@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "228881268208",
+    "project_id": "governmentapp-9ad94",
+    "storage_bucket": "governmentapp-9ad94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228881268208:android:065782fb543ab047fbb135",
+        "android_client_info": {
+          "package_name": "com.example.govermentapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOO3uh7CLoQb150m41PGsXFJ5_j3b_7Ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
