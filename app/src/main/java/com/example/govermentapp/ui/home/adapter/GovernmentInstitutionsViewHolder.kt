@@ -3,7 +3,7 @@ package com.example.govermentapp.ui.home.adapter
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.govermentapp.databinding.ItemGovernmentInstitutionBinding
-import com.example.govermentapp.domain.GovernmentInstitution
+import com.example.govermentapp.domain.models.GovernmentInstitution
 import com.example.govermentapp.ui.home.HomeUiAction
 
 class GovernmentInstitutionsViewHolder(view:View):RecyclerView.ViewHolder(view) {

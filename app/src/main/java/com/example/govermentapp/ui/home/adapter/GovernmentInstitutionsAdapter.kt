@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.govermentapp.R
-import com.example.govermentapp.domain.GovernmentInstitution
+import com.example.govermentapp.domain.models.GovernmentInstitution
 import com.example.govermentapp.ui.home.HomeUiAction
 
 class GovernmentInstitutionsAdapter(private var governmentInstitutions:List<GovernmentInstitution> = emptyList(), private var onActionClickListener:(HomeUiAction) -> Unit): RecyclerView.Adapter<GovernmentInstitutionsViewHolder>() {

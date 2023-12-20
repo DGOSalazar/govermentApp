@@ -3,7 +3,7 @@ package com.example.govermentapp.data.models.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.govermentapp.domain.GovernmentInstitution
+import com.example.govermentapp.domain.models.GovernmentInstitution
 
 @Entity(tableName = "government_institution_table")
 data class GobEntity (@PrimaryKey(autoGenerate = true)

@@ -4,6 +4,7 @@ import com.example.govermentapp.data.models.entities.FirebaseState
 import com.google.firebase.auth.FirebaseUser
 import android.location.Location
 import com.example.govermentapp.data.models.entities.GobEntity
+import com.example.govermentapp.domain.models.GovernmentInstitution
 import kotlinx.coroutines.flow.Flow
 
 interface GovernmentRepository {

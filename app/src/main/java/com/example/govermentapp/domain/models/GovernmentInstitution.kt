@@ -1,4 +1,4 @@
-package com.example.govermentapp.domain
+package com.example.govermentapp.domain.models
 
 import com.example.govermentapp.data.models.GovernmentInstitutionModel
 import com.example.govermentapp.data.models.entities.GobEntity

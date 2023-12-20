@@ -5,7 +5,6 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.govermentapp.data.models.entities.GobEntity
-import com.example.govermentapp.domain.usescase.GetGovernmentInstitutions
 
 @Dao
 interface GovernmentInstitutionsDao {
