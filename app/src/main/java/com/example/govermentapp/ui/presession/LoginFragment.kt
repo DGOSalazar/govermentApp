@@ -75,7 +75,7 @@ class LoginFragment : Fragment() {
                     (activity as GovernmentActivity).hideLoader()
                     Toast.makeText(
                         requireContext(),
-                        getString(R.string.welcome_message),
+                        getString(R.string.welcome_message_login),
                         Toast.LENGTH_SHORT
                     ).show()
                     findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())

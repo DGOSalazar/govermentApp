@@ -79,7 +79,6 @@ class GovernmentRepositoryImplementation
         }
     }
     //firebase
-    //firebase
     override suspend fun setRegisterUser(email: String, pass: String): FirebaseState<FirebaseUser> {
         var res: FirebaseUser? = null
         var errorMsg = ""

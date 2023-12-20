@@ -5,10 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/containerOrganization"
+    android:background="@color/white"
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ly_main"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -28,6 +30,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 app:tint="@color/black"
+                android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_organization"/>
 
             <TextView
@@ -38,7 +41,7 @@
                 tools:text="IMSS"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="11sp"
                 android:textStyle="bold" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -86,12 +89,48 @@
 
             <ImageView
                 android:id="@+id/ivShare"
+                android:contentDescription="@string/app_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_share"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
     </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_aux_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="@dimen/min_margin"
+        app:layout_constraintTop_toBottomOf="@id/ly_main">
+        <TextView
+            android:id="@+id/tvOperations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concat_operations"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvdDataset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concat_dataset"
+            app:layout_constraintTop_toBottomOf="@id/tvOperations"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCreatedAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concat_created"
+            app:layout_constraintTop_toBottomOf="@+id/tvdDataset"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

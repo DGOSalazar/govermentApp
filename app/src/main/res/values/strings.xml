@@ -12,6 +12,7 @@
     <string name="error_general_id">0081</string>
     <string name="btn_understand">Entendido</string>
     <string name="welcome_message">Registro exitoso, Bienvenido!</string>
+    <string name="welcome_message_login">Bienvenido!</string>
     <string name="error_label_mail">Introduce un correo correcto</string>
     <string name="error_label_pass">Introduce una contraseña de almenos 8 caracteres</string>
     <string name="biometric_title">Autenticación biométrica</string>
@@ -27,4 +28,7 @@
     <string name="login_biometric">Iniciar sesión con huella digital</string>
     <string name="conofiguration_error">Debes otorgar permisos en la configuración.</string>
     <string name="message_organization">Nombre de la organizacón: %s\nSitio de la publicación:\n%s\nUbicación desde donde se compartio la organización:\nLatitud:%s\nLongitud:%s</string>
+    <string name="concat_operations">Operacion: %1$s</string>
+    <string name="concat_dataset">Seteado: %1$s</string>
+    <string name="concat_created">Creado: %1$s</string>
 </resources>

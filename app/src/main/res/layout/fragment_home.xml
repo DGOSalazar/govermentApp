@@ -3,41 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.home.HomeFragment">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/svGovernmentInstitutions"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:iconifiedByDefault="false"
-        android:background="@color/background_image"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tblIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.Design.TabLayout" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpDcvv"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="4dp"
-        android:background="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tblIndicator"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/svGovernmentInstitutions"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvInstitutions"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            tools:listitem="@layout/item_government_institution"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
+        android:clipToPadding="false"
+        android:layout_marginTop="@dimen/regular_margin"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
