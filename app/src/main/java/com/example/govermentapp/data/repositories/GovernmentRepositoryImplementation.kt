@@ -1,4 +1,4 @@
-package com.example.govermentapp.data
+package com.example.govermentapp.data.repositories
 
 import android.annotation.SuppressLint
 import android.location.Location
@@ -10,9 +10,9 @@ import com.example.govermentapp.data.datasource.network.GobApiClient
 import com.example.govermentapp.data.models.entities.FirebaseState
 import com.example.govermentapp.data.models.entities.GobEntity
 import com.example.govermentapp.data.models.responses.GovernmentInstitutionResponse
-import com.example.govermentapp.domain.GovernmentInstitution
 import com.example.govermentapp.domain.GovernmentRepository
-import com.example.govermentapp.domain.toDomain
+import com.example.govermentapp.domain.models.GovernmentInstitution
+import com.example.govermentapp.domain.models.toDomain
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser

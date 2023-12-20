@@ -5,10 +5,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.govermentapp.domain.GovernmentInstitution
-import com.example.govermentapp.domain.usescase.FilterGovernmentInstitution
-import com.example.govermentapp.domain.usescase.GetGovernmentInstitutions
-import com.example.govermentapp.domain.usescase.GetLocation
+import com.example.govermentapp.domain.models.GovernmentInstitution
+import com.example.govermentapp.domain.usescase.FilterGovernmentInstitutionUseCase
+import com.example.govermentapp.domain.usescase.GetGovernmentInstitutionsUseCase
+import com.example.govermentapp.domain.usescase.GetLocationUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -18,9 +18,9 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val getGovernmentInstitutions: GetGovernmentInstitutions,
-    private val filterGovernmentInstitution: FilterGovernmentInstitution,
-    private val getLocation: GetLocation
+    private val getGovernmentInstitutions: GetGovernmentInstitutionsUseCase,
+    private val filterGovernmentInstitution: FilterGovernmentInstitutionUseCase,
+    private val getLocation: GetLocationUseCase
     ) : ViewModel() {
 
     private val _organizationsStateFlow: MutableStateFlow<HomeState> = MutableStateFlow(HomeState.Loading)
@@ -56,7 +56,11 @@ class HomeViewModel @Inject constructor(
 
     fun searchGovernmentInstitution(query: String) {
         viewModelScope.launch {
-            filterGovernmentInstitution(query).collect{
+            filterGovernmentInstitution(query)
+                .catch { exception ->
+                    _organizationsStateFlow.value = HomeState.Error(exception)
+                }
+                .collect{
                 _organizationsStateFlow.value = HomeState.Success(it)
             }
         }
