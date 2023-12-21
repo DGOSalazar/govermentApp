@@ -1,6 +1,6 @@
 # GovermentApp
 
-Prueba tecnica para plasmar conocimientos sobre tecnologias android con kotlin, desarrollado en conjunto ccon @Hugo Aguayo.
+Prueba tecnica para plasmar conocimientos sobre tecnologias android con kotlin, desarrollado en conjunto con @Hugo Aguayo.
 
 #Descripción ejercio:
 Se debera generar una aplicación la cual consuma el siguiente servicio de gobierno: GET  https://api.datos.gob.mx/v1/gobmx.facts
