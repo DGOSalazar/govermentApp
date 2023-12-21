@@ -26,7 +26,8 @@ Register:
 
 <img width="471" alt="image" src="https://github.com/DGOSalazar/govermentApp/assets/99159921/347571ff-c238-464c-9c8c-b919259cf825">
 
-Home
+Home:
+
 <img width="471" alt="image" src="https://github.com/DGOSalazar/govermentApp/assets/99159921/a3a5f086-f205-40f3-b837-0d0460118de3">
 <img width="471" alt="image" src="https://github.com/DGOSalazar/govermentApp/assets/99159921/02d8ebed-133d-4122-9a1c-036f276b6b62">
 <img width="471" alt="image" src="https://github.com/DGOSalazar/govermentApp/assets/99159921/c46f101a-90a4-4900-ada9-050c06b9df7b">
