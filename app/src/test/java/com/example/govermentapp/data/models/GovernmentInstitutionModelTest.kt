@@ -11,7 +11,7 @@ class GovernmentInstitutionModelTest {
         val fact = ""
         val url = ""
         //WHEN
-        val model = GovernmentInstitutionModel(id, organization, fact, url)
+        val model = GovernmentInstitutionModel(id, organization, fact, url, organization, fact, url)
         //THEN
         assert(id == model.id)
         assert(organization == model.organization)
