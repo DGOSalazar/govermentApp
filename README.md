@@ -10,16 +10,20 @@ Se debera generar una aplicación la cual consuma el siguiente servicio de gobie
 -Debera contar con manejo de errores para todas las llamadas de red.
 
 #Pantallas:
-Splash
+Splash:
+
 <img width="471" alt="image" src="https://github.com/DGOSalazar/govermentApp/assets/99159921/ad9d08f6-cd35-437b-8823-4a997d8f161b">
 
-Login primera vez
+Login primera vez:
+
 <img width="471" alt="image" src="https://github.com/DGOSalazar/govermentApp/assets/99159921/de77f26b-7b94-47d1-9394-fd16e46cb811">
 
-Login recurrente
+Login recurrente:
+
 <img width="471" alt="image" src="https://github.com/DGOSalazar/govermentApp/assets/99159921/402a539f-f902-4b84-a9c0-e79d2b09b3ff">
 
-Register
+Register:
+
 <img width="471" alt="image" src="https://github.com/DGOSalazar/govermentApp/assets/99159921/347571ff-c238-464c-9c8c-b919259cf825">
 
 Home
